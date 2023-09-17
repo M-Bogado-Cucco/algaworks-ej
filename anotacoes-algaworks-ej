@@ -1,0 +1,23 @@
+Anotações do Curso EJ ( Especialista Java )                                início: 25/07/23
+
+1 – Plataforma Java e ambiente de desenvolvimento
+
+Aula 1.9:  
+- Evitar usar a oracle openJDK em produção, pois não tem suporte em longo prazo mesmo para versões LTS
+- Oracle JDK (atualmente voltou a ser gratuito, tanto em desenvolvimento quanto em produção)
+- recomendou usar o Eclipse Temurin da Adoptium, o professor inclusive usa em produção, essa será a usada no curso
+
+Aula 1.10:
+- sdkMan: ferramenta que permite instalar diversas distribuições e versões do JDK usando alguns comandos e permite intercalar entre essas versões de maneira prática
+- https://sdkman.io/install
+- sdk list java
+- sdk install java 17.0.8-tem
+- se quiser usar a versão 11, basta dar os comandos:  lembrar que na aula usou o jdk da Temurin
+- sdk install java 11.0.x
+- sdk use java 11.0.x ( vai usar a versão 11, mas essa versão ainda não é a default)
+- echo $JAVA_HOME  (mostra a versão que está sendo usada )
+- para deixar uma versão default ( padrão )
+sdk default java 11.x    ou
+sdk default java 17.x
+
+Obs: Renomear várias palavras ao mesmo tempo: Shift + F6 
