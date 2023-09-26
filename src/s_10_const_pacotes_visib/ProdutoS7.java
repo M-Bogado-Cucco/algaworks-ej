@@ -1,32 +1,39 @@
 package s_10_const_pacotes_visib;
 
 import java.util.Objects;
+import java.util.UUID;
 
-public class Dez_01_Produto {
+public class ProdutoS7 {
 
   static final int QUANTIDADE_ESTOQUE_INICIAL = 10;
+
+  // aqui precisa inicializar
+  final String codigo;
   String nome;
   int quantidadeEstoque;
 
-  Dez_01_Produto() {
-    System.out.println("Construindo um produto");
+
+  ProdutoS7() {
+
+    this("Sem nome");
+
   }
 
-  Dez_01_Produto(String nome) {
-    Objects.requireNonNull(nome, "Nome é obrigatório");
-
-    this.nome = nome;
-    this.quantidadeEstoque =  QUANTIDADE_ESTOQUE_INICIAL;
+  ProdutoS7(String nome) {
+    this(nome, QUANTIDADE_ESTOQUE_INICIAL);
   }
 
-  public Dez_01_Produto(String nome, int quantidadeEstoque) {
+  ProdutoS7(String nome, int quantidadeEstoque) {
     Objects.requireNonNull(nome, "Nome é obrigatório");
 
     if (quantidadeEstoque < 0) {
       throw new IllegalArgumentException("Estoque inicial não pode ser negativo");
     }
+
     this.nome = nome;
     this.quantidadeEstoque = quantidadeEstoque;
+    //this.codigo = "xyz";
+    this.codigo = UUID.randomUUID().toString(); // gera um número aleatório e converte para string
   }
 }
 

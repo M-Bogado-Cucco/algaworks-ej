@@ -4,9 +4,20 @@ public class Dez_01_Programa {
 
   public static void main(String[] args) {
 
-    Dez_01_Produto produto1 = new Dez_01_Produto(null, -35);
-    Dez_01_Produto produto2 = new Dez_01_Produto("picanha", 50);
-    System.out.printf("Nome: %s\n", produto2.nome);
-    System.out.printf("Estoque: %d", produto2.quantidadeEstoque);
+    ProdutoS7 p1 = new ProdutoS7("Sorvete", 35);
+    ProdutoS7 produto2 = new ProdutoS7("picanha", 50);
+    ProdutoS7 p3 = new ProdutoS7();
+
+    System.out.println(p1.codigo);
+    System.out.println(p1.nome);
+    System.out.println(p1.quantidadeEstoque);
+
+    System.out.printf("\n2\nNome: %s\n", produto2.nome);
+    System.out.printf("Estoque: %d\n", produto2.quantidadeEstoque);
+
+    System.out.println("\n3\n"+p3.codigo);
+    System.out.println(p3.nome);
+    System.out.println(p3.quantidadeEstoque);
+
   }
 }
